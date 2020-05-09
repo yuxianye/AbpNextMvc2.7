@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Solution\Equipment\**" />
+    <EmbeddedResource Remove="Solution\Equipment\**" />
+    <None Remove="Solution\Equipment\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Solution.Domain.Shared\Solution.Domain.Shared.csproj" />
   </ItemGroup>
 
