@@ -9,7 +9,7 @@ namespace Solution.Equipments
     /// <summary>
     /// 设备巡检结果实体
     /// </summary>
-    public class EquipmentInspectionResult : AuditedAggregateRoot<Guid>, IMultiTenant
+    public class EquipmentInspectionResult : AuditedAggregateRoot<Guid>
     {
         /// <summary>
         /// 名称
@@ -21,15 +21,6 @@ namespace Solution.Equipments
         /// </summary>
         public string Remark { get; set; }
 
-        /// <summary>
-        /// 租户Id
-        /// </summary>
-        public Guid? TenantId { get; set; }
-
-        public EquipmentInspectionResult()
-        {
-
-        }
     }
 
 }

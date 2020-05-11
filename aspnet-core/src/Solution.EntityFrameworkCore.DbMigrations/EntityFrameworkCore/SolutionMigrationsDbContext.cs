@@ -19,7 +19,7 @@ namespace Solution.EntityFrameworkCore
      */
     public class SolutionMigrationsDbContext : AbpDbContext<SolutionMigrationsDbContext>
     {
-        public SolutionMigrationsDbContext(DbContextOptions<SolutionMigrationsDbContext> options) 
+        public SolutionMigrationsDbContext(DbContextOptions<SolutionMigrationsDbContext> options)
             : base(options)
         {
 

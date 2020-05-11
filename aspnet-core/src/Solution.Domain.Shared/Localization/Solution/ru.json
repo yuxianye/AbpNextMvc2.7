@@ -3,6 +3,15 @@
   "texts": {
     "Menu:Home": "Главная",
     "Welcome": "Добро пожаловать",
-    "LongWelcomeMessage": "Добро пожаловать в приложение. Этот запущенный проект основан на фреймворке ABP. Для получения дополнительной информации посетите сайт abp.io."
+    "LongWelcomeMessage": "Добро пожаловать в приложение. Этот запущенный проект основан на фреймворке ABP. Для получения дополнительной информации посетите сайт abp.io.",
+    "Menu:EquipmentType": "MenuEquipmentType",
+    "EquipmentType": "EquipmentType",
+    "EquipmentTypeName": "EquipmentTypeName",
+    "EquipmentTypeRemark": "EquipmentTypeRemark",
+    "EquipmentTypeTenantId": "EquipmentTypeTenantId",
+    "CreateEquipmentType": "CreateEquipmentType",
+    "EditEquipmentType": "EditEquipmentType",
+    "EquipmentTypeDeletionConfirmationMessage": "Are you sure to delete the equipmenttype {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }

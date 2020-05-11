@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+using Solution.Equipments.Dtos;
+using AutoMapper;
 
 namespace Solution.Web
 {
@@ -7,6 +8,7 @@ namespace Solution.Web
         public SolutionWebAutoMapperProfile()
         {
             //Define your AutoMapper configuration here for the Web project.
+            CreateMap<EquipmentTypeDto, CreateUpdateEquipmentTypeDto>();
         }
     }
 }

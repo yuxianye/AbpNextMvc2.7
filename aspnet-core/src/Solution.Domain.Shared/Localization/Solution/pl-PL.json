@@ -3,6 +3,15 @@
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Witaj",
-    "LongWelcomeMessage": "Witaj w aplikacji. To jest inicjalny projekt bazujący na ABP framework. Po więcej informacji odwiedź stronę abp.io."
+    "LongWelcomeMessage": "Witaj w aplikacji. To jest inicjalny projekt bazujący na ABP framework. Po więcej informacji odwiedź stronę abp.io.",
+    "Menu:EquipmentType": "MenuEquipmentType",
+    "EquipmentType": "EquipmentType",
+    "EquipmentTypeName": "EquipmentTypeName",
+    "EquipmentTypeRemark": "EquipmentTypeRemark",
+    "EquipmentTypeTenantId": "EquipmentTypeTenantId",
+    "CreateEquipmentType": "CreateEquipmentType",
+    "EditEquipmentType": "EditEquipmentType",
+    "EquipmentTypeDeletionConfirmationMessage": "Are you sure to delete the equipmenttype {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }

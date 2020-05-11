@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -10,9 +10,8 @@ namespace Solution.Equipments
     /// <summary>
     /// 设备类别
     /// </summary>
-    public class EquipmentType : AuditedAggregateRoot<Guid>, IMultiTenant
+    public class EquipmentType : AuditedEntity<Guid>
     {
-
         /// <summary>
         /// 设备类别名称
         /// </summary>
@@ -23,14 +22,18 @@ namespace Solution.Equipments
         /// </summary>
         public string Remark { get; set; }
 
-        /// <summary>
-        /// 租户Id
-        /// </summary>
-        public Guid? TenantId { get; set; }
-
-        public EquipmentType()
+        protected EquipmentType()
         {
         }
 
+        public EquipmentType(
+            Guid id,
+            string name,
+            string remark
+        ) : base(id)
+        {
+            Name = name;
+            Remark = remark;
+        }
     }
 }

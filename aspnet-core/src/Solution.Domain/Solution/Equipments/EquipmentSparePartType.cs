@@ -10,7 +10,7 @@ namespace Solution.Equipments
     /// <summary>
     /// 设备备件类别
     /// </summary>
-    public class EquipmentSparePartType : AuditedAggregateRoot<Guid>, IMultiTenant
+    public class EquipmentSparePartType : AuditedAggregateRoot<Guid>
     {
         /// <summary>
         /// 设备类别名称
@@ -22,15 +22,6 @@ namespace Solution.Equipments
         /// </summary>
         public string Remark { get; set; }
 
-        /// <summary>
-        /// 租户Id
-        /// </summary>
-        public Guid? TenantId { get; set; }
 
-
-        public EquipmentSparePartType()
-        {
-
-        }
     }
 }

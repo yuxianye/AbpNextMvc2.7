@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Solution.Users;
 using Volo.Abp.Data;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
+using Solution.Equipments;
 
 namespace Solution.EntityFrameworkCore
 {
@@ -25,6 +26,7 @@ namespace Solution.EntityFrameworkCore
         /* Add DbSet properties for your Aggregate Roots / Entities here.
          * Also map them inside SolutionDbContextModelCreatingExtensions.ConfigureSolution
          */
+        public DbSet<EquipmentType> EquipmentTypes { get; set; }
 
         public SolutionDbContext(DbContextOptions<SolutionDbContext> options)
             : base(options)

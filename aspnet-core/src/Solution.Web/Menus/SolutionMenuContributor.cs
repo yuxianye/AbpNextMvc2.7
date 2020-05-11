@@ -1,4 +1,4 @@
-﻿using System.Threading.Tasks;
+using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using Solution.Localization;
@@ -29,6 +29,9 @@ namespace Solution.Web.Menus
             var l = context.ServiceProvider.GetRequiredService<IStringLocalizer<SolutionResource>>();
 
             context.Menu.Items.Insert(0, new ApplicationMenuItem("Solution.Home", l["Menu:Home"], "/"));
+            context.Menu.AddItem(
+                new ApplicationMenuItem("EquipmentType", l["Menu:EquipmentType"], "/Equipments/EquipmentType")
+            );
         }
     }
 }

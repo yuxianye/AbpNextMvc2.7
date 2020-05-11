@@ -3,6 +3,15 @@
   "texts": {
     "Menu:Home": "Úvod",
     "Welcome": "Vítejte",
-    "LongWelcomeMessage": "Vítejte v aplikaci. Toto je startovací projekt založený na ABP frameworku. Pro více informací, navštivte abp.io."
+    "LongWelcomeMessage": "Vítejte v aplikaci. Toto je startovací projekt založený na ABP frameworku. Pro více informací, navštivte abp.io.",
+    "Menu:EquipmentType": "MenuEquipmentType",
+    "EquipmentType": "EquipmentType",
+    "EquipmentTypeName": "EquipmentTypeName",
+    "EquipmentTypeRemark": "EquipmentTypeRemark",
+    "EquipmentTypeTenantId": "EquipmentTypeTenantId",
+    "CreateEquipmentType": "CreateEquipmentType",
+    "EditEquipmentType": "EditEquipmentType",
+    "EquipmentTypeDeletionConfirmationMessage": "Are you sure to delete the equipmenttype {0}?",
+    "SuccessfullyDeleted": "Successfully deleted"
   }
 }

@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Solution.Equipments;
+using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
+using Volo.Abp.EntityFrameworkCore.Modeling;
 
 namespace Solution.EntityFrameworkCore
 {
@@ -17,6 +19,13 @@ namespace Solution.EntityFrameworkCore
 
             //    //...
             //});
+
+            builder.Entity<EquipmentType>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "EquipmentTypes", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
         }
     }
 }
