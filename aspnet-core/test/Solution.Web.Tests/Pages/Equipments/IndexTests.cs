@@ -13,7 +13,7 @@ namespace Solution.Pages.Equipments
             // Arrange
 
             // Act
-            var response = await GetResponseAsStringAsync("/EquipmentType");
+            var response = await GetResponseAsStringAsync("/Equipment");
 
             // Assert
             response.ShouldNotBeNull();

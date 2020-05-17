@@ -27,6 +27,15 @@ namespace Solution.EntityFrameworkCore
          * Also map them inside SolutionDbContextModelCreatingExtensions.ConfigureSolution
          */
         public DbSet<EquipmentType> EquipmentTypes { get; set; }
+        public DbSet<EquipmentStatus> EquipmentStatuses { get; set; }
+        public DbSet<EquipmentSparePartType> EquipmentSparePartTypes { get; set; }
+        public DbSet<EquipmentSparePart> EquipmentSpareParts { get; set; }
+        public DbSet<EquipmentMaintenanceResult> EquipmentMaintenanceResults { get; set; }
+        public DbSet<EquipmentMaintenance> EquipmentMaintenances { get; set; }
+        public DbSet<EquipmentInspectionResult> EquipmentInspectionResults { get; set; }
+        public DbSet<EquipmentInspection> EquipmentInspections { get; set; }
+        public DbSet<EquipmentBrand> EquipmentBrands { get; set; }
+        public DbSet<Equipment> Equipment { get; set; }
 
         public SolutionDbContext(DbContextOptions<SolutionDbContext> options)
             : base(options)

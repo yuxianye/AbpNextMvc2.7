@@ -13,6 +13,24 @@ namespace Solution
              * into multiple profile classes for a better organization. */
             CreateMap<EquipmentType, EquipmentTypeDto>();
             CreateMap<CreateUpdateEquipmentTypeDto, EquipmentType>(MemberList.Source);
+            CreateMap<EquipmentStatus, EquipmentStatusDto>();
+            CreateMap<CreateUpdateEquipmentStatusDto, EquipmentStatus>(MemberList.Source);
+            CreateMap<EquipmentSparePartType, EquipmentSparePartTypeDto>();
+            CreateMap<CreateUpdateEquipmentSparePartTypeDto, EquipmentSparePartType>(MemberList.Source);
+            CreateMap<EquipmentSparePart, EquipmentSparePartDto>();
+            CreateMap<CreateUpdateEquipmentSparePartDto, EquipmentSparePart>(MemberList.Source);
+            CreateMap<EquipmentMaintenanceResult, EquipmentMaintenanceResultDto>();
+            CreateMap<CreateUpdateEquipmentMaintenanceResultDto, EquipmentMaintenanceResult>(MemberList.Source);
+            CreateMap<EquipmentMaintenance, EquipmentMaintenanceDto>();
+            CreateMap<CreateUpdateEquipmentMaintenanceDto, EquipmentMaintenance>(MemberList.Source);
+            CreateMap<EquipmentInspectionResult, EquipmentInspectionResultDto>();
+            CreateMap<CreateUpdateEquipmentInspectionResultDto, EquipmentInspectionResult>(MemberList.Source);
+            CreateMap<EquipmentInspection, EquipmentInspectionDto>();
+            CreateMap<CreateUpdateEquipmentInspectionDto, EquipmentInspection>(MemberList.Source);
+            CreateMap<EquipmentBrand, EquipmentBrandDto>();
+            CreateMap<CreateUpdateEquipmentBrandDto, EquipmentBrand>(MemberList.Source);
+            CreateMap<Equipment, EquipmentDto>();
+            CreateMap<CreateUpdateEquipmentDto, Equipment>(MemberList.Source);
         }
     }
 }

@@ -1,0 +1,47 @@
+@page
+@using Solution.Web.Pages.Equipments.EquipmentInspectionResult
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@inherits Solution.Web.Pages.SolutionPage
+@model IndexModel
+@inject IPageLayout PageLayout
+@{
+    PageLayout.Content.Title = L["EquipmentInspectionResult"].Value;
+    PageLayout.Content.BreadCrumb.Add(L["Menu:EquipmentInspectionResult"].Value);
+    PageLayout.Content.MenuItemName = "EquipmentInspectionResult";
+}
+
+@section scripts
+{
+    <abp-script src="/Pages/Equipments/EquipmentInspectionResult/index.js" />
+}
+@section styles
+{
+    <abp-style src="/Pages/Equipments/EquipmentInspectionResult/index.css"/>
+}
+
+<abp-card>
+    <abp-card-header>
+        <abp-row>
+            <abp-column size-md="_6">
+                <abp-card-title>@L["EquipmentInspectionResult"]</abp-card-title>
+            </abp-column>
+            <abp-column size-md="_6" class="text-right">
+                <abp-button id="NewEquipmentInspectionResultButton"
+                            text="@L["CreateEquipmentInspectionResult"].Value"
+                            icon="plus"
+                            button-type="Primary" />
+            </abp-column>
+        </abp-row>
+    </abp-card-header>
+    <abp-card-body>
+        <abp-table striped-rows="true" id="EquipmentInspectionResultTable" class="nowrap">
+            <thead>
+            <tr>
+                <th>@L["Actions"]</th>
+                <th>@L["EquipmentInspectionResultName"]</th>
+                <th>@L["EquipmentInspectionResultRemark"]</th>
+            </tr>
+            </thead>
+        </abp-table>
+    </abp-card-body>
+</abp-card>

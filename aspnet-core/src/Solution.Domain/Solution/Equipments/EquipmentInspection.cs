@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities.Auditing;
@@ -46,6 +46,30 @@ namespace Solution.Equipments
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected EquipmentInspection()
+        {
+        }
+
+        public EquipmentInspection(
+            Guid id,
+            Guid equipmentId,
+            DateTime inspectionTime,
+            Guid equipmentInspectionResultId,
+            string problem,
+            string cause,
+            string solution,
+            string remark
+        ) :base(id)
+        {
+            EquipmentId = equipmentId;
+            InspectionTime = inspectionTime;
+            EquipmentInspectionResultId = equipmentInspectionResultId;
+            Problem = problem;
+            Cause = cause;
+            Solution = solution;
+            Remark = remark;
+        }
     }
 
 

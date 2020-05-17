@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities.Auditing;
@@ -28,5 +28,21 @@ namespace Solution.Equipments
         public string Remark { get; set; }
 
 
+
+        protected EquipmentSparePart()
+        {
+        }
+
+        public EquipmentSparePart(
+            Guid id,
+            Guid? equipmentSparePartTypeId,
+            string name,
+            string remark
+        ) :base(id)
+        {
+            EquipmentSparePartTypeId = equipmentSparePartTypeId;
+            Name = name;
+            Remark = remark;
+        }
     }
 }

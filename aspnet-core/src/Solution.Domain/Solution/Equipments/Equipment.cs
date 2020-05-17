@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -55,6 +55,32 @@ namespace Solution.Equipments
 
 
 
+
+        protected Equipment()
+        {
+        }
+
+        public Equipment(
+            Guid id,
+            Guid equipmentTypeId,
+            Guid equipmentBrandId,
+            string equipmentCode,
+            string name,
+            string specification,
+            DateTime manufactureDate,
+            Guid? equipmentStatusId,
+            string remark
+        ) :base(id)
+        {
+            EquipmentTypeId = equipmentTypeId;
+            EquipmentBrandId = equipmentBrandId;
+            EquipmentCode = equipmentCode;
+            Name = name;
+            Specification = specification;
+            ManufactureDate = manufactureDate;
+            EquipmentStatusId = equipmentStatusId;
+            Remark = remark;
+        }
     }
 
 }

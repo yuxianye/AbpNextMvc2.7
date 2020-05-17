@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -23,6 +23,20 @@ namespace Solution.Equipments
         public string Remark { get; set; }
 
 
+
+        protected EquipmentStatus()
+        {
+        }
+
+        public EquipmentStatus(
+            Guid id,
+            string name,
+            string remark
+        ) :base(id)
+        {
+            Name = name;
+            Remark = remark;
+        }
     }
 
 }
