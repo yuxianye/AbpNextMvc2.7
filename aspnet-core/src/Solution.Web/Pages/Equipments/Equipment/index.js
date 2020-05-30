@@ -44,7 +44,7 @@ $(function () {
             },
             { data: "equipmentTypeId" },
             { data: "equipmentBrandId" },
-            { data: "equipmentCode" },
+            { data: "code" },
             { data: "name" },
             { data: "specification" },
             { data: "manufactureDate" },

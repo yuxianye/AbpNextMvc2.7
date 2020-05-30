@@ -5,20 +5,35 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
-namespace Solution.Warehouses
+namespace Solution.Materials
 {
     /// <summary>
-    /// 仓库类型
+    /// 物料
     /// </summary>
-    public class WarehouseType : AuditedEntity<Guid>
+    public class Material : AuditedEntity<Guid>
     {
+        /// <summary>
+        /// 编码
+        /// </summary>
+        public string Code { get; set; }
+
 
         /// <summary>
         /// 名称
         /// </summary>
         public string Name { get; set; }
 
-        /// <summ
+        /// <summary>
+        /// 规格型号
+        /// </summary>
+        public string Specification { get; set; }
+
+        /// <summary>
+        /// 单位
+        /// </summary>
+        public Guid UnitId { get; set; }
+
+        /// <summary>
         /// 备注
         /// </summary>
         public string Remark { get; set; }

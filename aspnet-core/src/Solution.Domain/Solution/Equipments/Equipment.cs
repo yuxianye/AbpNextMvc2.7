@@ -26,7 +26,7 @@ namespace Solution.Equipments
         /// <summary>
         /// 设备编号
         /// </summary>
-        public string EquipmentCode { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// 设备名称
@@ -64,7 +64,7 @@ namespace Solution.Equipments
             Guid id,
             Guid equipmentTypeId,
             Guid equipmentBrandId,
-            string equipmentCode,
+            string code,
             string name,
             string specification,
             DateTime manufactureDate,
@@ -74,7 +74,7 @@ namespace Solution.Equipments
         {
             EquipmentTypeId = equipmentTypeId;
             EquipmentBrandId = equipmentBrandId;
-            EquipmentCode = equipmentCode;
+            Code = code;
             Name = name;
             Specification = specification;
             ManufactureDate = manufactureDate;

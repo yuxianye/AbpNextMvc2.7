@@ -88,7 +88,7 @@
     "Equipment": "Equipment",
     "EquipmentEquipmentTypeId": "EquipmentEquipmentTypeId",
     "EquipmentEquipmentBrandId": "EquipmentEquipmentBrandId",
-    "EquipmentEquipmentCode": "EquipmentEquipmentCode",
+    "EquipmentCode": "EquipmentCode",
     "EquipmentName": "EquipmentName",
     "EquipmentSpecification": "EquipmentSpecification",
     "EquipmentManufactureDate": "EquipmentManufactureDate",

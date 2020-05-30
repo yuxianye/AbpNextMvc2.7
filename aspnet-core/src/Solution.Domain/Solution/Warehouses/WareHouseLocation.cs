@@ -19,9 +19,14 @@ namespace Solution.Warehouses
         public Guid WareHouseAreaId { get; set; }
 
         /// <summary>
-        /// 名称
+        /// 编号
         /// </summary>
         public string Code { get; set; }
+
+        /// <summary>
+        /// 名称
+        /// </summary>
+        public string Name { get; set; }
 
         /// <summary>
         /// 备注

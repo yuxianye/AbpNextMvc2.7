@@ -17,7 +17,7 @@ namespace Solution.Equipments
         public Guid EquipmentId { get; set; }
 
         /// <summary>
-        /// 设备存在问题
+        /// 设备存在问题，后续可扩展问题库
         /// </summary>
         public string Problem { get; set; }
 

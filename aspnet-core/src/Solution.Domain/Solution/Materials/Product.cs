@@ -29,11 +29,10 @@ namespace Solution.Materials
         /// <summary>
         /// 规格型号
         /// </summary>
-        [StringLength(200)]
         public string Specification { get; set; }
 
         /// <summary>
-        /// 物料单位
+        /// 单位
         /// </summary>
         public Guid UnitId { get; set; }
 

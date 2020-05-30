@@ -16,7 +16,7 @@ namespace Solution.ProcessRoutes
         /// 工艺路线明细编号
         /// </summary>
         public Guid ProcessRouteItemId { get; set; }
-
+        
         /// <summary>
         /// 名称
         /// </summary>

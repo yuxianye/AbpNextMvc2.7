@@ -87,7 +87,7 @@
     "Equipment": "设备",
     "EquipmentEquipmentTypeId": "设备类型编号",
     "EquipmentEquipmentBrandId": "设备品牌编号",
-    "EquipmentEquipmentCode": "设备编码",
+    "EquipmentCode": "设备编码",
     "EquipmentName": "设备名称",
     "EquipmentSpecification": "规格型号",
     "EquipmentManufactureDate": "出厂日期",

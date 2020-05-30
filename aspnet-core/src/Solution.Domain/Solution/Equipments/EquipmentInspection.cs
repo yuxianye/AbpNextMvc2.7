@@ -17,6 +17,11 @@ namespace Solution.Equipments
         public Guid EquipmentId { get; set; }
 
         /// <summary>
+        /// 检查人
+        /// </summary>
+        public string InspectPerson { get; set; }
+
+        /// <summary>
         /// 巡检时间
         /// </summary>
         public DateTime InspectionTime { get; set; }

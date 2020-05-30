@@ -5,47 +5,53 @@ using System.ComponentModel.DataAnnotations.Schema;
 using Volo.Abp.Domain.Entities.Auditing;
 using Volo.Abp.MultiTenancy;
 
-namespace Solution.Qualities
+namespace Solution.Materials
 {
     /// <summary>
-    /// 质量检查
+    /// 物料清单
     /// </summary>
-    public class QualityInspect : AuditedEntity<Guid>
+    public class BOM : AuditedEntity<Guid>
     {
         /// <summary>
-        /// 质检人
-        /// </summary>
-        public string InspectPerson { get; set; }
-
-        /// <summary>
-        /// 检查类型编号
-        /// </summary>
-        public Guid QualityInspectTypeId { get; set; }
-
-        /// <summary>
-        /// 检查时间
-        /// </summary>
-        public DateTime InspectTime { get; set; }
-
-        /// <summary>
-        /// 工序名称
+        /// 名称
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// 质量问题编号
+        /// 产品编号
         /// </summary>
-        public Guid QualityProblemLibId { get; set; }
+        public Guid ProductId { get; set; }
 
         /// <summary>
-        /// 质量检查结果编号
+        /// BOM版本
         /// </summary>
-        public Guid QualityInspectResultId { get; set; }
+        public string Version { get; set; }
+
+        /// <summary>
+        /// 物料编号
+        /// </summary>
+        public Guid MaterialId { get; set; }
+
+        /// <summary>
+        /// 数量
+        /// </summary>
+        public int Count { get; set; }
+
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        public bool IsEnabled { get; set; }
 
         /// <summary>
         /// 备注
         /// </summary>
         public string Remark { get; set; }
+
+
+        public override object[] GetKeys()
+        {
+            return new Object[] { ProductId, MaterialId,Version };
+        }
 
     }
 }

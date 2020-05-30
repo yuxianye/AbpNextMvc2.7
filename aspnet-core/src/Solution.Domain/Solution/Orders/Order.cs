@@ -5,7 +5,7 @@ using System.Text;
 using Volo.Abp;
 using Volo.Abp.Domain.Entities;
 
-namespace Solution.Solution.Orders
+namespace Solution.Orders
 {
     public class Order : AggregateRoot<Guid>
     {
