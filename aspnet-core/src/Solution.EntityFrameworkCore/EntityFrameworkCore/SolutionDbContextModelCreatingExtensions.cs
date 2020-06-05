@@ -1,3 +1,5 @@
+using Solution.Materials;
+using Solution.Enterprises;
 using Solution.Equipments;
 using Microsoft.EntityFrameworkCore;
 using Volo.Abp;
@@ -116,6 +118,76 @@ namespace Solution.EntityFrameworkCore
                 b.Property(x => x.Name).IsRequired().HasMaxLength(Const.NameLength);
                 b.Property(x => x.Specification).IsRequired().HasMaxLength(Const.CommonStringLength64);
                 b.Property(x => x.Remark).HasMaxLength(Const.RemarkLength);
+                /* Configure more properties here */
+            });
+
+            builder.Entity<Enterprise>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "Enterprises", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<EnterpriseArea>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "EnterpriseAreas", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<EnterpriseProductionLine>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "EnterpriseProductionLines", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<EnterpriseSite>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "EnterpriseSites", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<EnterpriseWorkCenter>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "EnterpriseWorkCenters", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<EnterpriseWorkLocation>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "EnterpriseWorkLocations", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<BOM>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "BOMs", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<Material>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "Materials", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<Product>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "Products", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
+                /* Configure more properties here */
+            });
+
+            builder.Entity<ProductType>(b =>
+            {
+                b.ToTable(SolutionConsts.DbTablePrefix + "ProductTypes", SolutionConsts.DbSchema);
+                b.ConfigureByConvention(); 
                 /* Configure more properties here */
             });
         }

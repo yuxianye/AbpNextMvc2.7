@@ -41,5 +41,19 @@ namespace Solution.Materials
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected Product()
+        {
+        }
+
+        public Product(Guid id, string code, string name, Guid productTypeId, string specification, Guid unitId, string remark) : base(id)
+        {
+            Code = code;
+            Name = name;
+            ProductTypeId = productTypeId;
+            Specification = specification;
+            UnitId = unitId;
+            Remark = remark;
+        }
     }
 }

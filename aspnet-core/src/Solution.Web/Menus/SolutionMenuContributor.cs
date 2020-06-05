@@ -1,4 +1,6 @@
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
+using Solution.Permissions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Localization;
 using Solution.Localization;
@@ -20,6 +22,7 @@ namespace Solution.Web.Menus
 
         private async Task ConfigureMainMenuAsync(MenuConfigurationContext context)
         {
+            var authorizationService = context.ServiceProvider.GetRequiredService<IAuthorizationService>();
             if (!MultiTenancyConsts.IsEnabled)
             {
                 var administration = context.Menu.GetAdministration();
@@ -46,6 +49,66 @@ namespace Solution.Web.Menus
         .AddItem(new ApplicationMenuItem("Equipment", l["Menu:Equipment"], "/Equipments/Equipment"))
 );
 
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Enterprises.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Enterprises", l["Menu:Enterprises"], "/Enterprises/Enterprise")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Enterprises.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Enterprises", l["Menu:Enterprises"], "/Enterprises/EnterpriseArea")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Enterprises.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Enterprises", l["Menu:Enterprises"], "/Enterprises/EnterpriseProductionLine")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Enterprises.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Enterprises", l["Menu:Enterprises"], "/Enterprises/EnterpriseSite")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Enterprises.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Enterprises", l["Menu:Enterprises"], "/Enterprises/EnterpriseWorkCenter")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Enterprises.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Enterprises", l["Menu:Enterprises"], "/Enterprises/EnterpriseWorkLocation")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Materials.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Materials", l["Menu:Materials"], "/Materials/BOM")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Materials.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Materials", l["Menu:Materials"], "/Materials/Material")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Materials.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Materials", l["Menu:Materials"], "/Materials/Product")
+                );
+            }
+            if (await authorizationService.IsGrantedAsync(SolutionPermissions.Materials.Default))
+            {
+                context.Menu.AddItem(
+                    new ApplicationMenuItem("Materials", l["Menu:Materials"], "/Materials/ProductType")
+                );
+            }
         }
     }
 }

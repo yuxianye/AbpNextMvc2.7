@@ -53,5 +53,20 @@ namespace Solution.Materials
             return new Object[] { ProductId, MaterialId,Version };
         }
 
+
+        protected BOM()
+        {
+        }
+
+        public BOM(Guid id, string name, Guid productId, string version, Guid materialId, int count, bool isEnabled, string remark) : base(id)
+        {
+            Name = name;
+            ProductId = productId;
+            Version = version;
+            MaterialId = materialId;
+            Count = count;
+            IsEnabled = isEnabled;
+            Remark = remark;
+        }
     }
 }

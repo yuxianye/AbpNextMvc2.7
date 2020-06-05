@@ -44,5 +44,19 @@ namespace Solution.Enterprises
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected EnterpriseSite()
+        {
+        }
+
+        public EnterpriseSite(Guid id, Guid enterpriseId, string name, string address, string manager, string phone, string remark) : base(id)
+        {
+            EnterpriseId = enterpriseId;
+            Name = name;
+            Address = address;
+            Manager = manager;
+            Phone = phone;
+            Remark = remark;
+        }
     }
 }

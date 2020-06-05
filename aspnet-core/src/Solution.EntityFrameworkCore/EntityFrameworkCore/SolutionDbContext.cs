@@ -6,6 +6,8 @@ using Volo.Abp.EntityFrameworkCore.Modeling;
 using Volo.Abp.Identity;
 using Volo.Abp.Users.EntityFrameworkCore;
 using Solution.Equipments;
+using Solution.Enterprises;
+using Solution.Materials;
 
 namespace Solution.EntityFrameworkCore
 {
@@ -36,6 +38,16 @@ namespace Solution.EntityFrameworkCore
         public DbSet<EquipmentInspection> EquipmentInspections { get; set; }
         public DbSet<EquipmentBrand> EquipmentBrands { get; set; }
         public DbSet<Equipment> Equipment { get; set; }
+        public DbSet<Enterprise> Enterprises { get; set; }
+        public DbSet<EnterpriseArea> EnterpriseAreas { get; set; }
+        public DbSet<EnterpriseProductionLine> EnterpriseProductionLines { get; set; }
+        public DbSet<EnterpriseSite> EnterpriseSites { get; set; }
+        public DbSet<EnterpriseWorkCenter> EnterpriseWorkCenters { get; set; }
+        public DbSet<EnterpriseWorkLocation> EnterpriseWorkLocations { get; set; }
+        public DbSet<BOM> BOMs { get; set; }
+        public DbSet<Material> Materials { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductType> ProductTypes { get; set; }
 
         public SolutionDbContext(DbContextOptions<SolutionDbContext> options)
             : base(options)

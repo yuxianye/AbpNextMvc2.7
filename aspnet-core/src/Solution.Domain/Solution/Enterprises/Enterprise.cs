@@ -32,5 +32,17 @@ namespace Solution.Enterprises
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected Enterprise()
+        {
+        }
+
+        public Enterprise(Guid id, string name, string address, string phone, string remark) : base(id)
+        {
+            Name = name;
+            Address = address;
+            Phone = phone;
+            Remark = remark;
+        }
     }
 }

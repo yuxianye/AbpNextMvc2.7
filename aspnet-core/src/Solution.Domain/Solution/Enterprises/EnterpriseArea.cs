@@ -38,5 +38,18 @@ namespace Solution.Enterprises
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected EnterpriseArea()
+        {
+        }
+
+        public EnterpriseArea(Guid id, Guid enterpriseSiteId, string name, string manager, string phone, string remark) : base(id)
+        {
+            EnterpriseSiteId = enterpriseSiteId;
+            Name = name;
+            Manager = manager;
+            Phone = phone;
+            Remark = remark;
+        }
     }
 }

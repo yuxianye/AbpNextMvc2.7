@@ -33,5 +33,17 @@ namespace Solution.Enterprises
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected EnterpriseWorkCenter()
+        {
+        }
+
+        public EnterpriseWorkCenter(Guid id, Guid enterpriseProductionLineId, string name, string manager, string remark) : base(id)
+        {
+            EnterpriseProductionLineId = enterpriseProductionLineId;
+            Name = name;
+            Manager = manager;
+            Remark = remark;
+        }
     }
 }

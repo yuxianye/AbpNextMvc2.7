@@ -22,5 +22,15 @@ namespace Solution.Materials
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected ProductType()
+        {
+        }
+
+        public ProductType(Guid id, string name, string remark) : base(id)
+        {
+            Name = name;
+            Remark = remark;
+        }
     }
 }

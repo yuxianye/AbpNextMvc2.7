@@ -1,5 +1,9 @@
 using Solution.Equipments;
 using Solution.Equipments.Dtos;
+using Solution.Enterprises;
+using Solution.Enterprises.Dtos;
+using Solution.Materials;
+using Solution.Materials.Dtos;
 using AutoMapper;
 
 namespace Solution
@@ -31,6 +35,26 @@ namespace Solution
             CreateMap<CreateUpdateEquipmentBrandDto, EquipmentBrand>(MemberList.Source);
             CreateMap<Equipment, EquipmentDto>();
             CreateMap<CreateUpdateEquipmentDto, Equipment>(MemberList.Source);
+            CreateMap<Enterprise, EnterpriseDto>();
+            CreateMap<CreateUpdateEnterpriseDto, Enterprise>(MemberList.Source);
+            CreateMap<EnterpriseArea, EnterpriseAreaDto>();
+            CreateMap<CreateUpdateEnterpriseAreaDto, EnterpriseArea>(MemberList.Source);
+            CreateMap<EnterpriseProductionLine, EnterpriseProductionLineDto>();
+            CreateMap<CreateUpdateEnterpriseProductionLineDto, EnterpriseProductionLine>(MemberList.Source);
+            CreateMap<EnterpriseSite, EnterpriseSiteDto>();
+            CreateMap<CreateUpdateEnterpriseSiteDto, EnterpriseSite>(MemberList.Source);
+            CreateMap<EnterpriseWorkCenter, EnterpriseWorkCenterDto>();
+            CreateMap<CreateUpdateEnterpriseWorkCenterDto, EnterpriseWorkCenter>(MemberList.Source);
+            CreateMap<EnterpriseWorkLocation, EnterpriseWorkLocationDto>();
+            CreateMap<CreateUpdateEnterpriseWorkLocationDto, EnterpriseWorkLocation>(MemberList.Source);
+            CreateMap<BOM, BOMDto>();
+            CreateMap<CreateUpdateBOMDto, BOM>(MemberList.Source);
+            CreateMap<Material, MaterialDto>();
+            CreateMap<CreateUpdateMaterialDto, Material>(MemberList.Source);
+            CreateMap<Product, ProductDto>();
+            CreateMap<CreateUpdateProductDto, Product>(MemberList.Source);
+            CreateMap<ProductType, ProductTypeDto>();
+            CreateMap<CreateUpdateProductTypeDto, ProductType>(MemberList.Source);
         }
     }
 }

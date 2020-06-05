@@ -38,5 +38,18 @@ namespace Solution.Enterprises
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected EnterpriseWorkLocation()
+        {
+        }
+
+        public EnterpriseWorkLocation(Guid id, Guid enterpriseWorkCenterId, string name, Guid equipmentId, Guid processId, string remark) : base(id)
+        {
+            EnterpriseWorkCenterId = enterpriseWorkCenterId;
+            Name = name;
+            EquipmentId = equipmentId;
+            ProcessId = processId;
+            Remark = remark;
+        }
     }
 }

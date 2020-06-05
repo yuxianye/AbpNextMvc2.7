@@ -38,5 +38,18 @@ namespace Solution.Materials
         /// </summary>
         public string Remark { get; set; }
 
+
+        protected Material()
+        {
+        }
+
+        public Material(Guid id, string code, string name, string specification, Guid unitId, string remark) : base(id)
+        {
+            Code = code;
+            Name = name;
+            Specification = specification;
+            UnitId = unitId;
+            Remark = remark;
+        }
     }
 }
